@@ -1,0 +1,449 @@
+/* Reset default styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px; /* Increased padding for larger header */
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.5s ease; /* Transition for padding change */
+    box-sizing: border-box;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left i, .header-right i {
+    margin: 0 15px; /* Adjusted icon margin */
+    font-size: 1.8em; /* Slightly larger icon size */
+    cursor: pointer;
+}
+
+.header-left {
+    margin-left: 20px;
+}
+
+.header-left i:hover{
+    color: #bbb;
+}
+
+.header-right {
+    margin-right: 20px;
+}
+
+.header-right i:hover{
+    color: #bbb;
+
+}
+
+.header-center {
+    text-align: center;
+}
+
+.logo {
+    height: 70px; /* Increased height for larger logo */
+    transition: height 0.5s ease;
+}
+
+/* Slider styles */
+.slider {
+    width: 100%;
+    height: calc(100vh - 100px); /* Adjusted height to fit below header */
+    position: relative;
+    overflow: hidden;
+    margin-top: 132px; /* Space below header */
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    animation: slide 10s infinite;
+}
+
+.slides img {
+    width: 100%; /* Ensure images fill the slider width */
+    height: calc(100vh - 100px); /* Adjusted image height */
+    object-fit: cover;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Sections */
+main {
+    padding-top: 100px; /* Padding to push content below the header */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    padding: 20px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.8s ease-in-out; /* Adjusted transition timing */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.fade-section {
+    opacity: 1; /* Fade-in effect */
+}
+
+.left-to-right {
+    transform: translateX(-100%); /* Initially off-screen */
+    opacity: 0; /* Initially hidden */
+    transition: transform 1s ease, opacity 1s ease-in-out;
+}
+
+/* Section Titles */
+#section1 h2, #section2 h2, #section3 h2 {
+    font-size: 2em;
+    font-weight: bold;
+    background-color: white; /* Tomato background color */
+    color: black; /* White text color */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4); /* Darker shadow */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+#section4 h2 {
+    font-size: 2em;
+    font-weight: bold;
+    /* background-color: white; */
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    font-size: xxx-large;
+    font-weight: 800;
+}
+
+#section5 h2 {
+    font-size: xxx-large;
+    font-weight: 800;
+    margin-bottom: 5%;
+    /* margin-right: 70%; */
+    color: aliceblue;
+}
+
+.cpyr {
+    margin-top: 10%;
+}
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.category {
+    width: 14%;
+    margin: 8px;
+    padding: 8px;
+    /* background-color: #f0f0f0; */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    font-weight:800;
+    padding-top: 15px;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+.category img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Preserves aspect ratio */
+    object-fit: cover; /* Maintains image proportions */
+    border-radius: 10px;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Looks */
+.looks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    font-weight: 700;
+    border-radius: 15px;
+}
+
+.look {
+    width: 14%;
+    margin: 8px;
+    padding: 8px;
+    /* background-color: #f0f0f0; */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    padding-top: 15px;
+    font-weight: 800;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+.look img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Preserves aspect ratio */
+    object-fit: cover; /* Maintains image proportions */
+    border-radius: 10px;
+}
+
+.look:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Collections */
+/* .collection-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.collection {
+    width: 15%;
+    margin: 8px;
+    padding: 1px;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.collection img {
+    width: 100%; 
+    height: auto; 
+    -fit: cover;
+    border-radius: 30px;
+}
+
+.collection:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} */
+
+
+
+
+
+
+/* Collections */
+.collection-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    border-radius: 10px;   
+    font-weight: 800;
+}
+
+.collection {
+    width: 14%;
+    margin: 8px;
+    padding: 8px;
+    /* background-color: #f0f0f0; */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    padding-top: 15px;
+    box-shadow: 12px 10px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+.collection video {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Preserves aspect ratio */
+    object-fit: cover; /* Maintains image proportions */
+    border-radius: 10px;
+}
+.collection p {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333; /* Adjust text color as needed */
+}
+
+.collection:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 65px;
+}
+
+.social-links i {
+    margin: 15% 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.social-links i:hover{
+    transform: translateY(-5px);
+}
+/* Contact info */
+.contact-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left; /* Align text to the left in columns */
+}
+
+.contact-column {
+    flex: 1;
+    padding: 20px;
+    max-width: 300px;
+    box-sizing: border-box;
+    color: white; /* Changed text color to white */
+}
+
+.contact-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #ff6347; /* Tomato color for headings */
+}
+
+.contact-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-column ul li {
+    margin-bottom: 10px;
+}
+
+.contact-column ul li a {
+    color: white; /* Changed link color to white */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-column ul li a:hover {
+    color: #ff6347; /* Tomato color on hover */
+}
+
+.contact-column p {
+    margin: 10px 0; /* Adjusted margin for better spacing */
+}
+
+/* Search bar (if added later) */
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    background-color: #252525;
+    /* border: 1px solid #ccc; */
+    border-radius: 30px;
+    font-family: monospace;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1em;
+    margin-left: 5px;
+    background-color: #252525;
+    color: white;
+}
+
+
+.search-bar button {
+    background-color: #252525;
+    color: #ffffff;
+    border: none;
+    padding: 8px 1px;
+    margin-left: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Animations */
+@keyframes slide {
+    0%, 20%, 100% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-20%); }
+    50%, 70% { transform: translateX(-40%); }
+    75%, 95% { transform: translateX(-60%); }
+}
+
+/* Section backgrounds */
+#section4 {
+    background: rgb(87,106,210);
+    background: radial-gradient(circle, rgba(87,106,210,1) 54%, rgba(0,16,156,1) 65%);
+}
+
+#section5 {
+    background-color: black;
+    color: white;
+}
